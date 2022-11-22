@@ -33,7 +33,11 @@ const SearchContainer = () => {
 			}, 1000)
 		}
 	}
-	const optimizedDebounce = useMemo(() => debounce(), [])
+	const optimizedDebounce = useMemo(
+		() => debounce(),
+		// eslint-disable-next-line
+		[]
+	)
 
 	return (
 		<Wrapper>
